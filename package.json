@@ -1,6 +1,6 @@
 {
   "name": "parcel-starter",
-  "version": "0.1",
+  "version": "0.0.1",
   "description": "A starter kit for building web projects with modern JavaScript",
   "main": "src/index.js",
   "scripts": {
