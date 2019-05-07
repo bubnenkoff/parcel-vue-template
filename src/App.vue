@@ -2,41 +2,50 @@
   <div id="app">
     <el-container>
       <el-header>Header</el-header>
-      <el-container>
-        <el-aside width="200px">Aside</el-aside>
-        <el-container>
-            <el-main>
-              {{msg}}
-			  <foo></foo>
-            </el-main>
-          <el-footer>Footer</el-footer>
-        </el-container>
-      </el-container>
+          <router-view></router-view>
+      <el-footer>Footer</el-footer>
     </el-container>
   </div>
 </template>
 
 <script>
-import foo from './components/foo.vue'
+    import router from './router'
+    import Vue from 'vue'
+    import IndexPage from './components/IndexPage'
+    import AboutPage from './components/AboutPage'
+    import axios from 'axios'
 
-export default {
-  name: 'app',
-  data () {
-    return {
-      msg: 'I am a root App.vue Component Message'
+    export default {
+        name: 'app',
+        router,
+        components: {
+            IndexPage,
+            AboutPage,
+        }
     }
-  },
-  components: {
-      foo
-  }  
-}
 </script>
 
-<style lang="css">
+<style>
 
-  body
-  {
-    background-color: #fbfbf8;
-	font-size: 1.1em;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;  
+}
+
+.el-container {
+    height: 100vh;
+}
+
+.el-header, .el-footer {
+background-color: #ced5df;
+color: #333;
+text-align: center;
+line-height: 60px;
   }
 </style>
+
