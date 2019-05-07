@@ -9,13 +9,13 @@ If you will use it on Unix systems you need replace prebuild command `"prebuild"
 
 **Dependencies**:
 ```
-    "element-ui": "^2.4.11",
-    "parcel-bundler": "^1.10.3",
-    "vue": "^2.5.21",
-    "vue-hot-reload-api": "^2.3.1",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1",
-    "vue-axios": "^2.1.4",
+    "axios": "^0.18.0",
+    "element-ui": "^2.8.2",
+    "parcel-bundler": "^1.12.3",
+    "vue": "^2.6.10",
+    "vue-hot-reload-api": "^2.3.3",
+    "vue-router": "^3.0.6",
+    "vuex": "^3.1.0"
 ```
 
 How it's look like:
