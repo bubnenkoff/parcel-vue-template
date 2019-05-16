@@ -1,19 +1,25 @@
 <template>
   <el-container>
-    <el-aside width="200px">Aside</el-aside>
+    <side-bar></side-bar>
     <el-main>{{msg}}</el-main>
   </el-container>
 </template>
 
 <script>
+import SideBar from '../components/SideBar'
 
 export default {
   name: 'app',
   data () {
     return {
-      msg: 'About Page Content'
+      msg: 'Root Page Content'
     }
-  }
+  },
+
+  components:
+  {
+    SideBar
+  },  
   
 }
 </script>

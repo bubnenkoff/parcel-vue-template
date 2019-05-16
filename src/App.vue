@@ -1,8 +1,16 @@
 <template>
   <div id="app">
     <el-container>
-      <el-header>Header</el-header>
-          <router-view></router-view>
+      <el-header>
+        <el-menu :default-active="activeIndex" class="el-menu-demo" 
+          mode="horizontal" @select="handleSelect" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b" :router="true">
+           <el-menu-item index="/">Main</el-menu-item>
+           <el-menu-item index="about">About</el-menu-item>
+        </el-menu>
+      </el-header>
+      
+      <router-view></router-view>
+
       <el-footer>Footer</el-footer>
     </el-container>
   </div>
@@ -11,8 +19,8 @@
 <script>
     import router from './router'
     import Vue from 'vue'
-    import IndexPage from './components/IndexPage'
-    import AboutPage from './components/AboutPage'
+    import IndexPage from './pages/IndexPage'
+    import AboutPage from './pages/AboutPage'
     import axios from 'axios'
 
     export default {
@@ -21,7 +29,21 @@
         components: {
             IndexPage,
             AboutPage,
-        }
+        },
+
+    data() {
+      return {
+        activeIndex: '',
+      };
+      },        
+
+    methods:
+    {
+       handleSelect(key, keyPath) {
+        // console.log(key, keyPath);
+      }
+    }
+
     }
 </script>
 
@@ -41,11 +63,14 @@ html, body {
     height: 100vh;
 }
 
-.el-header, .el-footer {
-background-color: #ced5df;
-color: #333;
-text-align: center;
-line-height: 60px;
-  }
+.el-header, .el-footer 
+{
+  background-color: #ced5df;
+  color: #333;
+  text-align: center;
+  line-height: 60px;
+  padding: 0;
+}
+
 </style>
 

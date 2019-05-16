@@ -1,7 +1,7 @@
 import Router from 'vue-router'
 
-import IndexPage from './components/IndexPage'
-import AboutPage from './components/AboutPage'
+import IndexPage from './pages/IndexPage'
+import AboutPage from './pages/AboutPage'
 
 const router = new Router({
     'mode': 'history',

@@ -1,4 +1,4 @@
-import './components/assets/element-variables.scss'
+import './pages/assets/element-variables.scss'
 import Vue from 'vue';
 import App from './App.vue';
 import ElementUI from 'element-ui'
