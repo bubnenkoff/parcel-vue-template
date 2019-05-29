@@ -7,6 +7,8 @@ If you will use it on Unix systems you need replace prebuild command `"prebuild"
 
 `npm run start`
 
+`parcel build src/index.html`
+
 **Dependencies**:
 ```
     "axios": "^0.18.0",
